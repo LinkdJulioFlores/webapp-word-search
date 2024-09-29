@@ -1,4 +1,4 @@
-import CellLetterConfig from "components/component-configs/letter-cell.config";
+import CellLetterConfig from "component-configs/letter-cell.config";
 
 function LetterCellComponent({letter}: {letter: CellLetterConfig}) {
     return (

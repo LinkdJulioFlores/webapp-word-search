@@ -1,10 +1,10 @@
 export default class CellLetterConfig {
     private pLetter: string = "";
     private pIsClicked: boolean = false;
-    private pParentWord: string = "";
+    private pParentWord: string | null= "";
 
 
-    constructor(letter: string, parentWord: string) {
+    constructor(letter: string, parentWord: string | null) {
         this.pLetter = letter;
         this.pParentWord = parentWord;
     }
@@ -16,7 +16,7 @@ export default class CellLetterConfig {
         return null;
     }
 
-    get parentWord(): string {
+    get parentWord(): string | null{
         return this.pParentWord;
     }
 
