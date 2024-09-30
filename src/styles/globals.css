@@ -2,3 +2,142 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+* background-color: main webpage
+*
+* primary-color: This is usually used for primary elements, 
+*   such as text color or a main highlight color on your website.
+*
+* secondary-color: This is often used as a secondary or complementary color, 
+*   which could be applied to less prominent elements like buttons or borders.
+*
+* accent-color: This is generally a more vibrant color, 
+*   used to emphasize important elements such as buttons, links, or call-to-action components.
+*/
+/* globals.css */
+:root {
+    /* Default (Light) Theme */
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: #000000;
+
+    --button-background-color: #007AFF;
+
+    --highlight-color: #000000;
+
+    --background-color: #FFFFFF;
+}
+
+[data-theme="light"] {
+    --primary-text-color: #000000;
+    --secondary-text-color: #FFFFFF;
+
+    --button-background-color: #007AFF;
+    --highlight-color: #007AFF;
+
+    --background-color: #FFFFFF;
+}
+
+[data-theme="halloween"] {
+    --primary-text-color: #000000;
+    --secondary-text-color: #FFFFFF;
+
+    --button-background-color: #FF6500;
+    --highlight-color: #FF6500;
+
+    --background-color:  #FFFFFF;
+}
+
+[data-theme="purple"] {
+    --primary-color: #433878;
+    --secondary-color: #7E60BF;
+    --accent-color: #E4B1F0;
+    --background-color: #FFE1FF;
+}
+
+@layer components {
+    .theme-option {
+        height: 25px;
+        width: 25px;
+        border: 1px solid;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .theme-options {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+}
+
+#theme-light {
+    background-color: #007AFF;
+    border-color: white;
+}
+
+#theme-halloween {
+    background-color: #FF6500;
+    border-color: white;
+}
+
+#theme-purple {
+    background-color: #E4B1F0;
+    border-color: #FFFFFF;
+}
+
+html, body, #root {
+    padding: 0;
+    margin: 0;
+
+    height: 100%;
+    width: 100%;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    background-color: var(--background-color);
+}
+
+button {
+    background-color: var(--button-background-color);
+    color: var(--secondary-text-color);
+}
+
+button a {
+    color: var(--secondary-text-color);
+}
+
+div {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    font-size: 12px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: var(--primary-text-color);
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 24px;
+    color: var(--primary-text-color);
+}
+
+h2 {
+    font-size: 18px;
+    color: var(--primary-text-color);
+}
+
+#topnav-container {
+    border-bottom: 1px solid var(--highlight-color);
+    padding: 0 6px;
+}
+
+#outlined-card {
+    border: 1px solid var(--highlight-color);
+    border-radius: 8px;
+}

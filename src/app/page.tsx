@@ -1,6 +1,5 @@
 import CellLetterConfig from "component-configs/letter-cell.config";
-import LetterCellComponent from "components/letter-cell.component";
-import Link from "next/link";
+import LetterCellComponent from "src/components/letter-cell.component";
 import OriginalLogic, { OriginalLogicProtocol } from "src/component-configs/original-logic.config";
 
 export default function HomePage() {
@@ -13,7 +12,7 @@ export default function HomePage() {
     const logic = new OriginalLogic(ogLogicConfig);
 
     return (
-        <main className="">
+        <main>
             <div className="grid grid-cols-30 gap-0">
                 {/* Loop through the grid and render each letter */}
                 {logic.grid.map((row, rowIndex) => (

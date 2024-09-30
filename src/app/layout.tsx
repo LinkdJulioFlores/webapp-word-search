@@ -3,6 +3,7 @@ import "src/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import { TopNav } from "src/components/topnav";
 
 export const metadata: Metadata = {
     title: "Word Puzzle",
@@ -14,8 +15,11 @@ export default function RootLayout({
     children,
 }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang="en" className={`${GeistSans.variable} w-full h-lvh bg-black`}>
-            <body>{children}</body>
+        <html lang="en" className={`${GeistSans.variable}`}>
+            <body data-theme="light" className="flex flex-col gap-3">
+                <TopNav/>
+                {children}
+            </body>
         </html>
     );
 }
