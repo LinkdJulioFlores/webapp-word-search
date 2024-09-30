@@ -2,7 +2,8 @@ import CellLetterConfig from "component-configs/letter-cell.config";
 
 function LetterCellComponent({letter}: {letter: CellLetterConfig}) {
     return (
-        <button className="h-5 w-5 border-black bg-purple-50 text-center text-black font-light">
+
+        <button className="h-4 w-4 p-0 m-0 bg-white text-center text-black text-xs font-light flex items-center justify-center border border-black">
             {letter.letter}
         </button>
     )

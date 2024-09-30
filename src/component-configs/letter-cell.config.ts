@@ -9,11 +9,8 @@ export default class CellLetterConfig {
         this.pParentWord = parentWord;
     }
 
-    get letter(): string | null {
-        if (this.pLetter) {
-            return this.pLetter;
-        } 
-        return null;
+    get letter(): string {
+        return this.pLetter;
     }
 
     get parentWord(): string | null{
