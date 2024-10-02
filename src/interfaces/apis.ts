@@ -5,7 +5,7 @@ import {
     PlayerID,
 } from "customTypes/StringTypes";
 
-interface PlayerInfo {
+export interface PlayerInfo {
     ID: UUID;             // Unique identifier for the player
     playerID: PlayerID;
     name: CustomerName;   // Full name (optional, could use firstName + lastName)
@@ -22,3 +22,20 @@ interface PlayerInfo {
     username: Username; 
     email?: string;       // Optional: Player's email address (if needed for login or marketing)
 }
+
+export interface PlayerContextType {
+    player: PlayerInfo | null;
+    setPlayer: (player: PlayerInfo) => void;
+}
+
+export interface SwipeableRef {
+  nextSlide: () => void;
+  prevSlide: () => void;
+}
+
+export interface SwipeableProps {
+    items: React.ReactNode[];  // You can change this type based on the content you want to swipe
+    componentWidth: number;
+    ref?: SwipeableRef;
+}
+

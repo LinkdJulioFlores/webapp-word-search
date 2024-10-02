@@ -9,8 +9,8 @@ export function TopNav() {
 
             <div className="flex flex-row text-lg gap-3"> {/* This is the nav Links */}
                 <li><a><Link href="/">Home</Link></a></li>
-                <li><a>Games</a></li>
-                <li><a><Link href="settings">Settings</Link></a></li>
+                <li><a><Link href={"/games"}>Games</Link></a></li>
+                <li><a><Link href="/settings">Settings</Link></a></li>
             </div>
 
             <button className="mr-4 py-1 px-2 rounded-lg"> {/* This is the login button */}
